@@ -74,7 +74,6 @@ def all_supplies_in_holidays(holiday_hash)
 
       #put it all together:
       festival_string = festival_array.join(" ")
-      #binding.pry
       #convert the supplies array to a string output
       supply_string = supply_array.join(", ")
 
