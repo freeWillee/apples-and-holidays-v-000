@@ -68,6 +68,7 @@ def all_supplies_in_holidays(holiday_hash)
       festival_array = festival_key.to_s.split
       festival_array.each do |word|
         #capitalize each word in the array and store it
+        binding.pry
         festival_string << word.capitalize!
         end
 
