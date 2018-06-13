@@ -60,17 +60,22 @@ def all_supplies_in_holidays(holiday_hash)
   holiday_hash.each do |season_key, festival_hash|
     #binding.pry
     puts "#{season_key.to_s.capitalize!}:"
-    festival_string = ""
-    festival_hash.each do |festival_key, supply_array|
-      #capitalize the first letter of the holiday/festival
-        #covert the festival_key to a string and then split it up
+    festival_hash.each do |festival_key, supply_array|        
+      #instantiate variables to hold the printed output
+      festival_string = ""
+      supply_string = ""
+
       festival_array = festival_key.to_s.split
       festival_array.each do |word|
         #capitalize each word in the array and store it
         festival_string << word.capitalize!
-        supply_string = supply_array.join(", ")
-        puts "  #{festival_string}: #{supply_string}"
         end
+        
+      #convert the supplies array to a string output
+      supply_string = supply_array.join(", ")
+
+      #print out the holiday and supplies string created
+      puts "  #{festival_string}: #{supply_string}"
       end
     end
 end
