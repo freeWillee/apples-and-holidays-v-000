@@ -113,6 +113,8 @@ def all_holidays_with_bbq(holiday_hash)
       season.each do |holiday, supply_array|
         supply_array.each do |supply|
           if supply == "BBQ"
-            bbq_array << supply.to_sym
-            
+            bbq_array << holiday
+          end
+        end
+
 end
