@@ -61,11 +61,10 @@ def all_supplies_in_holidays(holiday_hash)
     #binding.pry
     puts "#{season_key.to_s.capitalize!}:"
     festival_hash.each do |festival_key, supply_array|
-      #instantiate variables to hold the printed output
+      #instantiate variables and arrays to hold the printed output
       festival_string = ""
       supply_string = ""
       festival_array = []
-      #capitalized_array = []
 
       festival_array = festival_key.to_s.split(/[_]/)
       festival_array.collect do |word|
@@ -74,8 +73,9 @@ def all_supplies_in_holidays(holiday_hash)
         binding.pry
         end
 
+      #put it all together:
       festival_string = festival_array.join(" ")
-      binding.pry
+      #binding.pry
       #convert the supplies array to a string output
       supply_string = supply_array.join(", ")
 
